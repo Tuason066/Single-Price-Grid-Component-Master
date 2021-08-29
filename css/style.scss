@@ -1,0 +1,168 @@
+// VARIABLES
+// Primary
+$Cyan: hsl(179, 62%, 43%);
+$Bright-Yellow: hsl(71, 73%, 54%);
+
+// Neutral
+$Light-Gray: hsl(204, 43%, 93%);
+$Grayish-Blue: hsl(218, 22%, 67%);
+
+// RESET
+
+html {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+// BASE STYLE
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+// MOBILE STYLE
+
+.container {
+    background-color: $Grayish-Blue;
+    padding: 5em 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.community {
+    padding: 2em;
+    background-color: #fff;
+    &__heading {
+        color: $Cyan;
+    }
+    &__sub-heading {
+        color: $Bright-Yellow;
+        font-weight: 700;
+        margin: 1.5em 0;
+        font-size: .98rem;
+    }
+    &__text {
+        color: $Grayish-Blue;
+        font-weight: 400;
+        line-height: 2;
+        font-size: .9rem;
+    }
+}
+
+.subscription {
+    padding: 2em;
+    background-color: $Cyan;
+    &__heading {
+        color: $Light-Gray;
+        margin-bottom: 1em;
+    }
+    &__text {
+        color: $Light-Gray;
+        margin: .7em 0 2em 0;
+        font-size: 1rem;
+    }
+    &__text-span {
+        font-weight: 700;
+    }
+    &__btn {
+        background-color: $Bright-Yellow;
+        color: $Light-Gray;
+        font-weight: 700;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        padding: 1em;
+        font-size: 1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    &__amount {
+        font-weight: 700;
+        color: #fff;
+        font-size: 2rem;
+    }
+    &__validity {
+        color: $Light-Gray;
+        font-size: 1rem;
+        margin-left: 1em;
+    }
+}
+
+.reasons {
+    background-color: hsla(179, 62%, 43%, .7);
+    padding: 2em;
+    &__heading {
+        color: #fff;
+        margin-bottom: 1em;
+    }
+    &__text {
+        color: $Light-Gray;
+        line-height: 1.5;
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 700px) {
+
+    .main {
+        max-width: 570px;
+        &__flex {
+            display: flex;
+        }
+        &__flex > * {
+            width: 50%;
+        }
+    }
+
+    .subscription__text {
+        font-size: .92rem;
+    }
+}
+
+.footer {
+    padding: 2em;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #eee;
+    &__text {
+        text-align: center;
+        font-size: .9rem;
+        line-height: 1.5;
+        width: 80%;
+        margin: 0 auto;
+    }
+    &__link {
+        color: $Cyan;
+        &:hover {
+            text-decoration: none;
+            opacity: .7;
+        }
+    }
+}
